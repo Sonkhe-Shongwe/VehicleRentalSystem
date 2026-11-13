@@ -1,0 +1,70 @@
+{
+  "images": [
+    {
+      "slug": "audi_r8",
+      "model": "Audi R8",
+      "source_title": "File:Audi r8.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Audi_r8.jpg",
+      "creator": "Iorisrandombses5001",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Audi_r8.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "local_file": "catalogue_acquisition/batch04/images/audi_r8.jpg",
+      "sha256": "53fd531a8398a6734af56c541248aaa9be3e4c71f70bb8f3e5775b177c3619c2",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "bmw_m3",
+      "model": "BMW M3",
+      "source_title": "File:BMW M3.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:BMW_M3.jpg",
+      "creator": "Thomas Wolf (Der Wolf im Wald)",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/BMW_M3.jpg/1280px-BMW_M3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch04/images/bmw_m3.jpg",
+      "sha256": "1a639e773c058ca6d194e18a01d3a153d6adb68957e94c291360caddea93fe19",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "ford_mustang_gt",
+      "model": "Ford Mustang GT",
+      "source_title": "File:Ford S550 Mustang GT.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ford_S550_Mustang_GT.jpg",
+      "creator": "Ziongarage",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Ford_S550_Mustang_GT.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+      "local_file": "catalogue_acquisition/batch04/images/ford_mustang_gt.jpg",
+      "sha256": "a46d6b88a38dd68fa20334ba31bde7847ef4011f7c33928013d150f5be553862",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "land_rover_defender",
+      "model": "Land Rover Defender",
+      "source_title": "File:Land Rover Defender (CAL 24G) - 7 June 2026.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_(CAL_24G)_-_7_June_2026.jpg",
+      "creator": "Aethonatic",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Land_Rover_Defender_%28CAL_24G%29_-_7_June_2026.jpg/1280px-Land_Rover_Defender_%28CAL_24G%29_-_7_June_2026.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch04/images/land_rover_defender.jpg",
+      "sha256": "9f6bb27c9c2cb625d729f2acd7eb653295d72a7ccf01107a5164a4290999b787",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "volvo_xc60",
+      "model": "Volvo XC60",
+      "source_title": "File:Volvo XC60 II 2025 facelift 001.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Volvo_XC60_II_2025_facelift_001.jpg",
+      "creator": "JustAnotherCarDesigner",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b2/Volvo_XC60_II_2025_facelift_001.jpg/1280px-Volvo_XC60_II_2025_facelift_001.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch04/images/volvo_xc60.jpg",
+      "sha256": "dc262b0b05fe89a61df1e2edf0d90f8621d5ecb34c6b63b1e8dd9bf33756a60c",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    }
+  ],
+  "omitted": []
+}

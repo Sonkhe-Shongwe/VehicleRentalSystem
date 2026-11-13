@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/portfolio">
+    <file alias="ford_ranger.jpg">../assets/ford_ranger.jpg</file>
+    <file alias="toyota_corolla.jpg">../assets/toyota_corolla.jpg</file>
+    <file alias="hyundai_i20.jpg">../assets/hyundai_i20.jpg</file>
+  </qresource>
+</RCC>

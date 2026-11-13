@@ -1,0 +1,57 @@
+{
+  "images": [
+    {
+      "slug": "chery_tiggo4",
+      "model": "Chery Tiggo 4",
+      "source_title": "File:2025 Chery Tiggo 4 silver front.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:2025_Chery_Tiggo_4_silver_front.jpg",
+      "creator": "Throwawayacc222",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/2025_Chery_Tiggo_4_silver_front.jpg/1280px-2025_Chery_Tiggo_4_silver_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch02/images/chery_tiggo4.jpg",
+      "sha256": "a1d04ab23601d362d7736b322732841e8fc0116b0dd83fabf411b372a60f02c8",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "ford_ecosport",
+      "model": "Ford EcoSport",
+      "source_title": "File:Ford EcoSport 183608225.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ford_EcoSport_183608225.jpg",
+      "creator": "Trop86",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Ford_EcoSport_183608225.jpg/1280px-Ford_EcoSport_183608225.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch02/images/ford_ecosport.jpg",
+      "sha256": "1b5de2f43c0ab44387c2dff21a329b5db2a6f025cd54eb9e2864a58cfc3ce116",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "nissan_almera",
+      "model": "Nissan Almera",
+      "source_title": "File:Nissan Almera 115030.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Nissan_Almera_115030.jpg",
+      "creator": "Trop86",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7b/Nissan_Almera_115030.jpg/1280px-Nissan_Almera_115030.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch02/images/nissan_almera.jpg",
+      "sha256": "dedcaad60bdc0a5a551c2e83881749fcfbe6f76228f289713004b05d4d637681",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "suzuki_jimny",
+      "model": "Suzuki Jimny",
+      "source_title": "File:Jimny Front.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Jimny_Front.jpg",
+      "creator": "LacanJust1",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a3/Jimny_Front.jpg/1280px-Jimny_Front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch02/images/suzuki_jimny.jpg",
+      "sha256": "b550c5a985fa5e1c7610744e6afdf958d743d531a1275461bf312bd05a774103",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    }
+  ],
+  "omitted": []
+}

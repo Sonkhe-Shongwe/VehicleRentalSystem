@@ -1,0 +1,44 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "rental-studio-local",
+      "displayName": "Rental Studio 2.0 - local Qt Quick fictional development",
+      "description": "Use the configured Qt Creator MinGW 64-bit Qt 6 kit; does not download QA ZIPs or enable real customer data.",
+      "binaryDir": "${sourceDir}/build/rental-studio-local",
+      "cacheVariables": {
+        "BUILD_QTQUICK_P2_SPIKE": "ON",
+        "BUILD_P7_SQLITE_SANDBOX": "ON",
+        "BUILD_TESTING": "ON"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "rental-studio-local-app",
+      "configurePreset": "rental-studio-local",
+      "targets": ["rental_studio_qtquick_spike"]
+    },
+    {
+      "name": "rental-studio-local-all",
+      "configurePreset": "rental-studio-local"
+    }
+  ],
+  "testPresets": [
+    {
+      "name": "rental-studio-local-ux-ctrl-002",
+      "configurePreset": "rental-studio-local",
+      "filter": {
+        "include": {
+          "name": "^rental_studio_ux_ctrl_002_(wide|compact)$"
+        }
+      },
+      "output": {"outputOnFailure": true}
+    },
+    {
+      "name": "rental-studio-local-all",
+      "configurePreset": "rental-studio-local",
+      "output": {"outputOnFailure": true}
+    }
+  ]
+}

@@ -1,24 +1,27 @@
 # Rental Studio 2.0
 
-Rental Studio is an offline Windows desktop portfolio project built with **C++, Qt 6 Quick and QML**. It demonstrates a vehicle rental workflow with generated fictional records. The fleet contains **131 vehicles across 70 model families**.
+Rental Studio is a personal Windows desktop application for managing vehicles, bookings and returns. It runs offline and is built with C++17 and Qt Quick. The demo includes 131 fictional vehicles across 70 model families.
 
-## Explore the app
+[Build from source](#build-from-source) · [Screenshots](docs/screenshots/README.md) · [Architecture](docs/ARCHITECTURE.md) · [Testing](docs/TESTING.md)
 
-- **Overview** shows fleet availability, active rentals and due dates.
-- **Vehicles** lets you switch between Gallery and Table, filter the fleet and inspect a vehicle.
-- **Rentals** takes you from quote to booking and return, with a record in contract history. Closing and reopening the standard demo resets its fictional session.
-- **SQLite Lab** is an optional engineering demo. It runs a quote, booking, return, archive and vehicle retirement in an isolated temporary database.
+## Demo
 
-## Run from source on Windows
+![Rental Studio walkthrough showing a quote, booking, return and restored vehicle availability](docs/media/rental-walkthrough.webp)
 
-1. Clone this repository and open its root `CMakeLists.txt` in **Qt Creator**.
-2. Select a **64-bit Windows Qt 6 MinGW kit** with Qt Quick, Quick Controls, Quick Dialogs, Qt Test and Qt SQL. Choose the `rental-studio-local` CMake preset.
-3. Build and run `rental_studio_qtquick_spike`.
+[Download the 67-second MP4](docs/media/rental-walkthrough.mp4?raw=true)
 
-## Design and verification
+## Build from source
 
-QML handles presentation and interaction. C++ owns pricing in integer cents, booking eligibility, date validation and persistence. The standard demo uses protected `QSaveFile` writes. The opt-in SQLite Lab demonstrates transactions, foreign keys and active-booking constraints.
+1. Clone this repository and open the root `CMakeLists.txt` in Qt Creator.
+2. Select a 64-bit Qt 6 desktop kit with Widgets, Quick, Quick Controls, Quick Dialogs, SQL, Test and SVG. The CI build uses Qt 6.8.3. For a Windows MinGW build, use a Qt kit built for MinGW.
+3. Select the `rental-studio-local` CMake preset. Build and run the `rental_studio_qtquick_spike` target. `VehicleRentalSystem_A3` is the original Qt Widgets target.
 
-The upstream source at [`87e001e880da`](https://github.com/Sonkhe-Shongwe/vehicle-rental-system/commit/87e001e880dae32770492e03556af346757d6517) passed **150/150 native tests on Linux**, **150/150 on Windows**, and **8/8 packaged journeys** on a separate GitHub-hosted Windows runner. The fresh offline Windows check is pending. This repository presents the source demo. [Verified GitHub Actions run](https://github.com/Sonkhe-Shongwe/vehicle-rental-system/actions/runs/43291522841)
+## Try a rental
 
-Rental Studio began as a university Qt Widgets project and evolved into a Qt Quick desktop application. The [original repository](https://github.com/Sonkhe-Shongwe/vehicle-rental-system) holds the development history. [Architecture](docs/ARCHITECTURE.md) · [Catalogue photo credits](catalogue_acquisition/ACTIVE_ASSET_CREDITS.md) · [Portfolio photo credits](assets/portfolio/IMAGE_CREDITS.md) · [Asset notes](assets/README.md).
+1. In **Vehicles**, search for `C001`, select the Toyota Corolla and choose **Book selected vehicle**.
+2. Set the duration to three days and choose **Preview quote**. Enter **Demo Customer** and **0000000000**, then choose **Confirm booking**.
+3. In **Rentals**, select the new contract and choose **Return selected rental**, then **Confirm return**. The contract appears in **History** and the Corolla is available again.
+
+The standard demo resets when the app closes. To try the separate SQLite Lab, launch with `--p7-fictional-sql-lab` and open **SQLite Lab** in the sidebar. It uses a temporary database with its own sample data.
+
+[Asset credits](docs/ASSET_CREDITS.md)
