@@ -365,6 +365,103 @@ public:
     }
 };
 
+static bool capturePortfolioDemo(QQuickWindow *window, FleetController &fleet,
+                                 RentalListModel &rentals, RentalBookingController &booking,
+                                 const RentalSystem &system) {
+    const QSize size(1280, 720);
+    window->resize(size);
+    if (!QDir::current().mkdir(QStringLiteral("portfolio-demo-frames"))) {
+        qCritical() << "Use a working directory without portfolio-demo-frames";
+        return false;
+    }
+    const QDir output(QDir::current().filePath(QStringLiteral("portfolio-demo-frames")));
+    const auto findItem=[](const auto &self, QQuickItem *item,
+                           const QString &name) -> QQuickItem * {
+        if (item->isVisible() && item->objectName() == name)
+            return item;
+        for (auto *child : item->childItems()) {
+            if (auto *found = self(self, child, name))
+                return found;
+        }
+        return nullptr;
+    };
+    const auto control=[&](const QString &name) {
+        return findItem(findItem, window->contentItem(), name);
+    };
+    const auto press=[&](const QString &name) {
+        auto *item = control(name);
+        if (!item || !item->isEnabled()) {
+            qCritical() << "Portfolio demo control unavailable:" << name;
+            return false;
+        }
+        item->forceActiveFocus(Qt::TabFocusReason);
+        QTest::keyClick(window, Qt::Key_Space);
+        return true;
+    };
+    const auto frames=[&](const QString &stage) {
+        for (int frame = 0; frame < 6; ++frame) {
+            QTest::qWait(100);
+            const auto image = window->grabWindow();
+            const auto name = QStringLiteral("%1-%2.jpg").arg(stage).arg(frame);
+            if (image.size() != size || !image.save(output.filePath(name), "JPEG", 95)) {
+                qCritical() << "Portfolio demo frame failed:" << name << image.size();
+                return false;
+            }
+        }
+        return true;
+    };
+
+    if (fleet.totalCount() != 131 || !frames("01-overview") ||
+        !press("workspaceNavFleet") || !frames("02-vehicles"))
+        return false;
+
+    auto *search = control("fleetSearchField");
+    if (!search)
+        return false;
+    search->forceActiveFocus(Qt::TabFocusReason);
+    for (const auto key : {Qt::Key_C, Qt::Key_0, Qt::Key_0, Qt::Key_1})
+        QTest::keyClick(window, key);
+    fleet.selectById("C001");
+    if (fleet.selectedId() != "C001" || !fleet.selectedAvailable() ||
+        !frames("03-available") || !press("fleetBookSelectedButton"))
+        return false;
+
+    QTest::qWait(180);
+    auto *days = control("bookingDays");
+    auto *name = control("bookingCustomer");
+    auto *phone = control("bookingPhone");
+    if (!days || !name || !phone)
+        return false;
+    days->setProperty("value", 3);
+    if (!press("bookingPreviewButton") || !frames("04-quote") ||
+        !booking.canConfirm() || !booking.quoteSummary().contains("Total R 1350.00"))
+        return false;
+    name->setProperty("text", "Fictional Demo Customer");
+    phone->setProperty("text", "0000000000");
+    if (!press("bookingConfirmButton"))
+        return false;
+
+    QTest::qWait(180);
+    const auto rentalId = booking.lastRentalId();
+    const auto *vehicle = system.findVehicleById("C001");
+    if (rentalId.isEmpty() || !vehicle || !vehicle->getIsRented() ||
+        !rentals.locateById(rentalId) || rentals.selectedContract().value("status").toString() != "Active" ||
+        !frames("05-booked") || !press("rentalReturnButton") || !frames("06-return"))
+        return false;
+
+    if (!press("rentalReturnConfirm") || !frames("07-returned") ||
+        vehicle->getIsRented() || rentals.selectedContract().value("status").toString() != "Returned" ||
+        !press("rentalFilterHistory") || !frames("08-history") ||
+        rentals.statusFilter() != "History" || rentals.selectedRentalId() != rentalId)
+        return false;
+
+    if (!press("workspaceNavFleet"))
+        return false;
+    QTest::qWait(150);
+    fleet.selectById("C001");
+    return fleet.selectedId() == "C001" && fleet.selectedAvailable() && frames("09-available-again");
+}
+
 int main(int argc, char *argv[]) {
     QGuiApplication app(argc, argv);
     QCoreApplication::setApplicationName("RentalStudioP2Spike");
@@ -410,6 +507,7 @@ int main(int argc, char *argv[]) {
     parser.addOption({"pa-fleet-003-smoke", "Native Precision Automotive Fleet gallery/table/inspector presentation and data-safety proof."});
     parser.addOption({"pa-rentals-004-smoke", "Inspect the actual Precision Automotive Rentals contract panels, register and status."});
     parser.addOption({"portfolio-catalog-smoke", "CI-only real 131-vehicle offline portfolio demo check."});
+    parser.addOption({"portfolio-demo-capture", "Capture a fictional quote, booking and return for the portfolio video."});
     parser.addOption({"p6-fleet-add-smoke", "Native fictional fleet creation test."});
     parser.addOption({"fleet-photo-smoke", "Native fictional offline photo source, safe import and gallery/inspector test."});
     parser.addOption({"p6-fleet-remove-smoke", "Native confirmed fictional vehicle removal test."});
@@ -433,6 +531,11 @@ int main(int argc, char *argv[]) {
     parser.addOption({"p7-fictional-sql-app-smoke", "CI-only native test of the real app's isolated fictional SQLite Lab."});
 #endif
     parser.process(app);
+    const bool portfolioDemoCapture = parser.isSet("portfolio-demo-capture");
+    if (portfolioDemoCapture && parser.optionNames().size() != 1) {
+        qCritical() << "Portfolio demo capture must run by itself";
+        return 1;
+    }
     // Load bundled font only on explicit request. No silent font substitution
     // and no download, file IO, or network access at application runtime.
     QString r2FontTrialFamily;
@@ -509,7 +612,7 @@ int main(int argc, char *argv[]) {
                            uiReopenTest || cleanupTest || tamperTest || lockProbeTest;
     const bool persistentDemo=parser.isSet("persistent-fictional-demo") || sessionTest;
     const bool portfolioShowcase=parser.optionNames().isEmpty() ||
-        parser.isSet("portfolio-catalog-smoke");
+        parser.isSet("portfolio-catalog-smoke") || portfolioDemoCapture;
     if(sessionTest) {
         // The UI and non-UI fixture sequences have separate test roots.
         QStandardPaths::setTestModeEnabled(true);
@@ -1220,6 +1323,18 @@ int main(int argc, char *argv[]) {
     startupWindow->setPosition(startupArea.x()+
             std::max(0,(startupArea.width()-startupW)/2),
         startupArea.y()+std::max(0,(startupArea.height()-startupH)/2));
+    if (portfolioDemoCapture) {
+        QTimer::singleShot(800, &app, [&] {
+            const bool ok = capturePortfolioDemo(startupWindow, fleet, rentalModel,
+                                                 bookingActions, system);
+            if (ok)
+                qInfo() << "Portfolio demo: captured fictional booking and return";
+            else
+                qCritical() << "Portfolio demo capture failed";
+            app.exit(ok ? 0 : 1);
+        });
+        return app.exec();
+    }
     // Normal Direction A launch starts in Overview (workspace 0).
     // Historical P2 Fleet-only smokes explicitly open Fleet first, without
     // changing any real operator navigation, selection or domain records.
