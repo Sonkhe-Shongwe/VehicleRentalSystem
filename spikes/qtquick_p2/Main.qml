@@ -3499,8 +3499,8 @@ ApplicationWindow {
                             }
                             Label {
                                 text: persistentFictionalDemo
-                                      ? "This saved session uses a predefined test contact. No personal details are stored."
-                                      : "Customer details are sent only to the C++ commit service."
+                                      ? "This session uses a preset contact."
+                                      : "Use sample contact details for this booking."
                                 color: ink; wrapMode: Text.WordWrap
                             }
                             AccessibleTextField {
