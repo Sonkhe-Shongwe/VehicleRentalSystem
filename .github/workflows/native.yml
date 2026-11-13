@@ -1,0 +1,116 @@
+name: Rental Studio native verification
+
+on:
+  push:
+    branches: [main, docs/portfolio-source-handoff]
+    paths-ignore: ['**.md', 'docs/screenshots/**']
+  pull_request:
+    branches: [main]
+    paths-ignore: ['**.md', 'docs/screenshots/**']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    name: Qt 6.8.3 / ${{ matrix.toolchain }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 25
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - runner: ubuntu-24.04
+            host: linux
+            arch: linux_gcc_64
+            qpa: offscreen
+            toolchain: Linux GCC
+          - runner: windows-2022
+            host: windows
+            arch: win64_msvc2022_64
+            qpa: windows
+            toolchain: Windows MSVC
+    env:
+      QT_QPA_PLATFORM: ${{ matrix.qpa }}
+      QT_QUICK_BACKEND: software
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          persist-credentials: false
+      - name: Record tested source
+        shell: bash
+        run: git rev-parse HEAD
+      - name: Install Linux prerequisites
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mirrors=/etc/apt/apt-mirrors.txt
+          if [[ -f "$mirrors" ]] && grep -q 'azure.archive.ubuntu.com' "$mirrors"; then
+            sudo sed -i '/azure[.]archive[.]ubuntu[.]com/d' "$mirrors"
+            grep -Eq 'https?://(archive|security)[.]ubuntu[.]com/ubuntu' "$mirrors"
+          fi
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=15 update
+          sudo apt-get -o Acquire::Retries=2 -o Acquire::https::Timeout=15 install -y --no-install-recommends ninja-build g++ cmake libgl1 libxkbcommon-x11-0 libxcb-cursor0
+      - uses: jurplel/install-qt-action@v4
+        with:
+          version: '6.8.3'
+          host: ${{ matrix.host }}
+          target: desktop
+          arch: ${{ matrix.arch }}
+          cache: true
+      - name: Configure and build on Linux
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          cmake -S . -B build/ci -G Ninja -DCMAKE_BUILD_TYPE=Release "-DCMAKE_PREFIX_PATH=$QT_ROOT_DIR" -DBUILD_TESTING=ON -DBUILD_QTQUICK_P2_SPIKE=ON -DBUILD_P7_SQLITE_SANDBOX=ON -DBUILD_R2_INTER_FONT_TRIAL=ON
+          cmake --build build/ci --parallel 2
+      - name: Configure and build on Windows
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          cmake -S . -B build/ci -G "Visual Studio 17 2022" -A x64 "-DCMAKE_PREFIX_PATH=$env:QT_ROOT_DIR" -DBUILD_TESTING=ON -DBUILD_QTQUICK_P2_SPIKE=ON -DBUILD_P7_SQLITE_SANDBOX=ON -DBUILD_R2_INTER_FONT_TRIAL=ON
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          cmake --build build/ci --config Release --parallel 2
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          if (Get-Command Set-DisplayResolution -ErrorAction SilentlyContinue) {
+            Set-DisplayResolution -Width 1920 -Height 1080 -Force
+          }
+      - name: Run native CTests
+        run: ctest --test-dir build/ci -C Release --output-on-failure
+      - name: Verify the screenshot files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for dimensions in 1500x860 1280x720; do
+            for screen in catalogue-qt-overview catalogue-qt-fleet-all catalogue-qt-rentals p7-real-app-fictional-sql-lab; do
+              python tests/verify_qt_png.py "build/ci/spikes/qtquick_p2/$screen-$dimensions.png" "${dimensions%x*}" "${dimensions#*x}"
+            done
+          done
+      - name: Upload native screenshots
+        uses: actions/upload-artifact@v4
+        with:
+          name: rental-studio-${{ matrix.host }}-screenshots
+          path: |
+            build/ci/spikes/qtquick_p2/catalogue-qt-overview-*.png
+            build/ci/spikes/qtquick_p2/catalogue-qt-fleet-all-*.png
+            build/ci/spikes/qtquick_p2/catalogue-qt-rentals-*.png
+            build/ci/spikes/qtquick_p2/p7-real-app-fictional-sql-lab-*.png
+          if-no-files-found: error
+      - name: Verify the relocated Windows application
+        if: runner.os == 'Windows'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = "Stop"
+          $kit = Join-Path $env:RUNNER_TEMP "rental-studio-fictional-qa"
+          New-Item -ItemType Directory -Path "$kit/demo" | Out-Null
+          Copy-Item "build/ci/spikes/qtquick_p2/Release/rental_studio_qtquick_spike.exe" "$kit/RentalStudioP2Review.exe"
+          Copy-Item "demo/vehicles.txt", "demo/rentals.txt" "$kit/demo"
+          Copy-Item "spikes/qtquick_p2/Check-Rental-Studio.cmd" "$kit"
+          git rev-parse HEAD | Set-Content "$kit/SOURCE_COMMIT.txt"
+          & "$env:QT_ROOT_DIR/bin/windeployqt.exe" --release --no-compiler-runtime --qmldir "spikes/qtquick_p2" "$kit/RentalStudioP2Review.exe"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          & "$kit/Check-Rental-Studio.cmd"
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }

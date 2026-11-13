@@ -1,0 +1,149 @@
+{
+  "images": [
+    {
+      "slug": "bmw_3series",
+      "source_title": "File:BMW3Series2025.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:BMW3Series2025.jpg",
+      "creator": "Nulldayo",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e0/BMW3Series2025.jpg/1280px-BMW3Series2025.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/bmw_3series.jpg",
+      "sha256": "774849a2d202cd8ae27063430e1844844ab7c20ae59a198fcefdd4985ed5b39e",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "ford_ranger",
+      "source_title": "File:Ford Ranger US-Spec (52180290118).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Ford_Ranger_US-Spec_(52180290118).jpg",
+      "creator": "crash71100",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Ford_Ranger_US-Spec_%2852180290118%29.jpg/1280px-Ford_Ranger_US-Spec_%2852180290118%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/ford_ranger.jpg",
+      "sha256": "8460ca0787e677229533798eedc99357172ef5901683f86d4033f8cde6a3272f",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "honda_cb500",
+      "source_title": "File:Honda CB500 (47070844324).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Honda_CB500_(47070844324).jpg",
+      "creator": "Guillaume Vachey from Chalon sur Saone, France",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Honda_CB500_%2847070844324%29.jpg/1280px-Honda_CB500_%2847070844324%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/honda_cb500.jpg",
+      "sha256": "e0bac47bc237a9453a3ce24b4e33657c1dee3c82920dfb426e0c03b1e422e595",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "honda_civic",
+      "source_title": "File:Honda Civic 075226749.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Honda_Civic_075226749.jpg",
+      "creator": "Trop86",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e1/Honda_Civic_075226749.jpg/1280px-Honda_Civic_075226749.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/honda_civic.jpg",
+      "sha256": "ba9bca0a365c6aa7bb9460d160ef54fe8109920ebbe32823f8d31f4c8286ec1d",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "hyundai_staria",
+      "source_title": "File:Hyundai Staria in Basel.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Hyundai_Staria_in_Basel.jpg",
+      "creator": "Calreyn88",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Hyundai_Staria_in_Basel.jpg/1280px-Hyundai_Staria_in_Basel.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/hyundai_staria.jpg",
+      "sha256": "915bcb78e376ba88b9799655f602bcf50b99f6d4a6a141a36b0b9dd0e0d6840c",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "kia_picanto",
+      "source_title": "File:Kia Picanto 143619.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Kia_Picanto_143619.jpg",
+      "creator": "Trop86",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b0/Kia_Picanto_143619.jpg/1280px-Kia_Picanto_143619.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/kia_picanto.jpg",
+      "sha256": "094d691c6332e943f61cf638844daa254f0dd1bfb2deb55c7210a04490317ddf",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "ktm_duke",
+      "source_title": "File:Moscow, KTM Duke 390 with Crazy Iron cage, Oct 2026 05.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Moscow%2C_KTM_Duke_390_with_Crazy_Iron_cage%2C_Oct_2026_05.jpg",
+      "creator": "Retired electrician",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/5e/Moscow%2C_KTM_Duke_390_with_Crazy_Iron_cage%2C_Oct_2026_05.jpg/1280px-Moscow%2C_KTM_Duke_390_with_Crazy_Iron_cage%2C_Oct_2026_05.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/ktm_duke.jpg",
+      "sha256": "14ec1675a14d8994ee32e1c6a384abcf7198ac40ffb3d3d4f474dab221281323",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "suzuki_swift",
+      "source_title": "File:Suzuki Swift Sport ZC33S.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Suzuki_Swift_Sport_ZC33S.jpg",
+      "creator": "TTTNIS",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Suzuki_Swift_Sport_ZC33S.jpg/1280px-Suzuki_Swift_Sport_ZC33S.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/suzuki_swift.jpg",
+      "sha256": "16b566edaea3fed2843d7732b2b5ea70f1d34b4ca8603b7b13a7840eeeb78c39",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "toyota_corolla_cross",
+      "source_title": "File:Toyota Corolla Cross Z '25 (2).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Cross_Z_'25_(2).jpg",
+      "creator": "Oq10pass",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e2/Toyota_Corolla_Cross_Z_%2725_%282%29.jpg/1280px-Toyota_Corolla_Cross_Z_%2725_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/toyota_corolla_cross.jpg",
+      "sha256": "3f229464f3048c009c82d1ee00bf573c02a9b19ccfe561906ff87faac3b439a7",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "toyota_fortuner",
+      "source_title": "File:Toyota Fortuner.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Toyota_Fortuner.jpg",
+      "creator": "TTTNIS",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/01/Toyota_Fortuner.jpg/1280px-Toyota_Fortuner.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/toyota_fortuner.jpg",
+      "sha256": "eb0ca3fa1cba6b3d46c49c5065cda1dcd621fec50ed95f6df63cf7f70c7e7f9b",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "toyota_hilux",
+      "source_title": "File:Toyota Hilux (50722639491).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Toyota_Hilux_(50722639491).jpg",
+      "creator": "crash71100",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8d/Toyota_Hilux_%2850722639491%29.jpg/1280px-Toyota_Hilux_%2850722639491%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/toyota_hilux.jpg",
+      "sha256": "9b53b7621ca741b13275ecaebca21cae8bf99668d826f25c5cb7f1e1f7915164",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    },
+    {
+      "slug": "yamaha_mt07",
+      "source_title": "File:YAMAHA MT-07.JPG",
+      "source_page": "https://commons.wikimedia.org/wiki/File:YAMAHA_MT-07.JPG",
+      "creator": "Tokumeigakarinoaoshima",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fb/YAMAHA_MT-07.JPG/1280px-YAMAHA_MT-07.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "assets/portfolio/yamaha_mt07.jpg",
+      "sha256": "925161ade9d1a978fab6ac5130d97a1eb00904c4d42904b1cc4a9e6b422d208f",
+      "modification": "Resized, centred and letterboxed to 1024x680"
+    }
+  ],
+  "omitted": []
+}

@@ -1,0 +1,40 @@
+# Asset credits
+
+The portfolio bundles 29 reference JPEGs with recorded Wikimedia Commons CC0 declarations. The photos depict representative make and model families. They have been resized and re-encoded for the app, with letterboxing where applicable. The fleet uses labelled silhouettes for the remaining families.
+
+| Local file | Creator | Original source | Declared terms |
+| --- | --- | --- | --- |
+| [toyota_corolla.jpg](../assets/toyota_corolla.jpg) | 01x07x2022000 | [Commons file](https://commons.wikimedia.org/wiki/File:Toyota_Corolla_IMG_6391.JPG) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| [ford_ranger.jpg](../assets/ford_ranger.jpg) | Hyins | [Commons file](https://commons.wikimedia.org/wiki/File:2nd_Gen_2025_Ford_Ranger_T6_RA_XLT_4WD_P789_China_Front_Three_Quarter_View.jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| [hyundai_i20.jpg](../assets/hyundai_i20.jpg) | Trop86 | [Commons file](https://commons.wikimedia.org/wiki/File:Hyundai_i20_133151.jpg) | [CC0 1.0](https://creativecommons.org/publicdomain/zero/1.0/) |
+| [bmw_3series.jpg](../assets/portfolio/bmw_3series.jpg) | Nulldayo | [Commons file](https://commons.wikimedia.org/wiki/File:BMW3Series2025.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [ford_ranger.jpg](../assets/portfolio/ford_ranger.jpg) | crash71100 | [Commons file](https://commons.wikimedia.org/wiki/File:Ford_Ranger_US-Spec_%2852180290118%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [honda_cb500.jpg](../assets/portfolio/honda_cb500.jpg) | Guillaume Vachey from Chalon sur Saone, France | [Commons file](https://commons.wikimedia.org/wiki/File:Honda_CB500_%2847070844324%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [honda_civic.jpg](../assets/portfolio/honda_civic.jpg) | Trop86 | [Commons file](https://commons.wikimedia.org/wiki/File:Honda_Civic_075226749.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [hyundai_staria.jpg](../assets/portfolio/hyundai_staria.jpg) | Calreyn88 | [Commons file](https://commons.wikimedia.org/wiki/File:Hyundai_Staria_in_Basel.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [kia_picanto.jpg](../assets/portfolio/kia_picanto.jpg) | Trop86 | [Commons file](https://commons.wikimedia.org/wiki/File:Kia_Picanto_143619.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [ktm_duke.jpg](../assets/portfolio/ktm_duke.jpg) | Retired electrician | [Commons file](https://commons.wikimedia.org/wiki/File:Moscow%2C_KTM_Duke_390_with_Crazy_Iron_cage%2C_Oct_2026_05.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [suzuki_swift.jpg](../assets/portfolio/suzuki_swift.jpg) | TTTNIS | [Commons file](https://commons.wikimedia.org/wiki/File:Suzuki_Swift_Sport_ZC33S.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [toyota_corolla_cross.jpg](../assets/portfolio/toyota_corolla_cross.jpg) | Oq10pass | [Commons file](https://commons.wikimedia.org/wiki/File:Toyota_Corolla_Cross_Z_%2725_%282%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [toyota_fortuner.jpg](../assets/portfolio/toyota_fortuner.jpg) | TTTNIS | [Commons file](https://commons.wikimedia.org/wiki/File:Toyota_Fortuner.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [toyota_hilux.jpg](../assets/portfolio/toyota_hilux.jpg) | crash71100 | [Commons file](https://commons.wikimedia.org/wiki/File:Toyota_Hilux_%2850722639491%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [yamaha_mt07.jpg](../assets/portfolio/yamaha_mt07.jpg) | Tokumeigakarinoaoshima | [Commons file](https://commons.wikimedia.org/wiki/File:YAMAHA_MT-07.JPG) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [isuzu_dmax.jpg](../catalogue_acquisition/batch01/images/isuzu_dmax.jpg) | Guillaume Vachey from Chalon sur Saone, France | [Commons file](https://commons.wikimedia.org/wiki/File:Isuzu_D-Max_%2845114138465%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [volkswagen_golf_gti.jpg](../catalogue_acquisition/batch01/images/volkswagen_golf_gti.jpg) | Tokumeigakarinoaoshima | [Commons file](https://commons.wikimedia.org/wiki/File:Volkswagen_GOLF_GTI_%287BA-CDDNP%29_front.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [volkswagen_polo.jpg](../catalogue_acquisition/batch01/images/volkswagen_polo.jpg) | Guillaume Vachey from Chalon sur Saone, France | [Commons file](https://commons.wikimedia.org/wiki/File:VW_Polo_%2832865914808%29.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [chery_tiggo4.jpg](../catalogue_acquisition/batch02/images/chery_tiggo4.jpg) | Throwawayacc222 | [Commons file](https://commons.wikimedia.org/wiki/File:2025_Chery_Tiggo_4_silver_front.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [ford_ecosport.jpg](../catalogue_acquisition/batch02/images/ford_ecosport.jpg) | Trop86 | [Commons file](https://commons.wikimedia.org/wiki/File:Ford_EcoSport_183608225.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [nissan_almera.jpg](../catalogue_acquisition/batch02/images/nissan_almera.jpg) | Trop86 | [Commons file](https://commons.wikimedia.org/wiki/File:Nissan_Almera_115030.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [suzuki_jimny.jpg](../catalogue_acquisition/batch02/images/suzuki_jimny.jpg) | LacanJust1 | [Commons file](https://commons.wikimedia.org/wiki/File:Jimny_Front.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [audi_r8.jpg](../catalogue_acquisition/batch04/images/audi_r8.jpg) | Iorisrandombses5001 | [Commons file](https://commons.wikimedia.org/wiki/File:Audi_r8.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [bmw_m3.jpg](../catalogue_acquisition/batch04/images/bmw_m3.jpg) | Thomas Wolf (Der Wolf im Wald) | [Commons file](https://commons.wikimedia.org/wiki/File:BMW_M3.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [ford_mustang_gt.jpg](../catalogue_acquisition/batch04/images/ford_mustang_gt.jpg) | Ziongarage | [Commons file](https://commons.wikimedia.org/wiki/File:Ford_S550_Mustang_GT.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [land_rover_defender.jpg](../catalogue_acquisition/batch04/images/land_rover_defender.jpg) | Aethonatic | [Commons file](https://commons.wikimedia.org/wiki/File:Land_Rover_Defender_%28CAL_24G%29_-_7_June_2026.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [volvo_xc60.jpg](../catalogue_acquisition/batch04/images/volvo_xc60.jpg) | JustAnotherCarDesigner | [Commons file](https://commons.wikimedia.org/wiki/File:Volvo_XC60_II_2025_facelift_001.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [audi_q5.jpg](../catalogue_acquisition/batch05/images/audi_q5.jpg) | Retired electrician | [Commons file](https://commons.wikimedia.org/wiki/File:Moscow%2C_Audi_Q5_blue%2C_Mar_2026_01.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+| [toyota_land_cruiser_prado.jpg](../catalogue_acquisition/batch05/images/toyota_land_cruiser_prado.jpg) | Retired electrician | [Commons file](https://commons.wikimedia.org/wiki/File:Moscow%2C_Toyota_Land_Cruiser_Prado_%28J250%29_July_2026_01.jpg) | [CC0 1.0](http://creativecommons.org/publicdomain/zero/1.0/deed.en) |
+
+## Icons and fonts
+
+- The locally bundled Lucide SVG variants retain the [ISC and Feather MIT notices](../spikes/qtquick_p2/assets/r2_icons/LICENSE-LUCIDE.txt). The app uses fixed colour variants of the original paths.
+- The default build uses the system font. The optional Inter build uses the pinned source described in [Inter provenance](../spikes/qtquick_p2/assets/r2_fonts/SOURCE.md) under the [SIL Open Font License](../spikes/qtquick_p2/assets/r2_fonts/INTER_OFL.txt).

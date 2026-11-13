@@ -1,0 +1,5 @@
+Car|C001|Toyota|Corolla|450.00|0|4
+Car|C002|Ford|Ranger|700.00|1|4
+Car|C003|Hyundai|i20|400.00|0|4
+Motorcycle|M001|Honda|CB500F|280.00|0|471
+Motorcycle|M002|Yamaha|MT-07|300.00|0|689

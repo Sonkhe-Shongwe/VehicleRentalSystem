@@ -1,0 +1,31 @@
+{
+  "images": [
+    {
+      "slug": "audi_q5",
+      "model": "Audi Q5",
+      "source_title": "File:Moscow, Audi Q5 blue, Mar 2026 01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Moscow%2C_Audi_Q5_blue%2C_Mar_2026_01.jpg",
+      "creator": "Retired electrician",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b8/Moscow%2C_Audi_Q5_blue%2C_Mar_2026_01.jpg/1280px-Moscow%2C_Audi_Q5_blue%2C_Mar_2026_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch05/images/audi_q5.jpg",
+      "sha256": "50064d2842d4d14f44476a6dac62430aa35e01a71280deebd3671f17efe5ad15",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "toyota_land_cruiser_prado",
+      "model": "Toyota Land Cruiser Prado",
+      "source_title": "File:Moscow, Toyota Land Cruiser Prado (J250) July 2026 01.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Moscow%2C_Toyota_Land_Cruiser_Prado_(J250)_July_2026_01.jpg",
+      "creator": "Retired electrician",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Moscow%2C_Toyota_Land_Cruiser_Prado_%28J250%29_July_2026_01.jpg/1280px-Moscow%2C_Toyota_Land_Cruiser_Prado_%28J250%29_July_2026_01.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch05/images/toyota_land_cruiser_prado.jpg",
+      "sha256": "f0cb077ee697e96f7ed794c3b8394e047a312470b3f05a26cb9f8c6a2f4e0baa",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    }
+  ],
+  "omitted": []
+}

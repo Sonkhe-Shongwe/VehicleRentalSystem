@@ -1,0 +1,44 @@
+{
+  "images": [
+    {
+      "slug": "isuzu_dmax",
+      "model": "Isuzu D-Max",
+      "source_title": "File:Isuzu D-Max (45114138465).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Isuzu_D-Max_(45114138465).jpg",
+      "creator": "Guillaume Vachey from Chalon sur Saone, France",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cb/Isuzu_D-Max_%2845114138465%29.jpg/1280px-Isuzu_D-Max_%2845114138465%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch01/images/isuzu_dmax.jpg",
+      "sha256": "fa5e0c6c0ed51e98b2f450f3b36f21ca56a79c69caad811511594c212265dd9b",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "volkswagen_golf_gti",
+      "model": "Volkswagen Golf GTI",
+      "source_title": "File:Volkswagen GOLF GTI (7BA-CDDNP) front.jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Volkswagen_GOLF_GTI_(7BA-CDDNP)_front.jpg",
+      "creator": "Tokumeigakarinoaoshima",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a8/Volkswagen_GOLF_GTI_%287BA-CDDNP%29_front.jpg/1280px-Volkswagen_GOLF_GTI_%287BA-CDDNP%29_front.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch01/images/volkswagen_golf_gti.jpg",
+      "sha256": "77dc0c53d3d3fdde1ca9476db4d033f8f9da9c3b9185d2de6b3959548c8c2e4e",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    },
+    {
+      "slug": "volkswagen_polo",
+      "model": "Volkswagen Polo",
+      "source_title": "File:VW Polo (32865914808).jpg",
+      "source_page": "https://commons.wikimedia.org/wiki/File:VW_Polo_(32865914808).jpg",
+      "creator": "Guillaume Vachey from Chalon sur Saone, France",
+      "licence": "CC0",
+      "licence_url": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "source_thumbnail_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/22/VW_Polo_%2832865914808%29.jpg/1280px-VW_Polo_%2832865914808%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "local_file": "catalogue_acquisition/batch01/images/volkswagen_polo.jpg",
+      "sha256": "579419e0097da5f146b2e86d8c5d2721fcd96e0ea148269a4bb10dbe36807584",
+      "modification": "Resized, re-encoded, centred and letterboxed to 1024x680; CC BY-SA adaptations retain original licence"
+    }
+  ],
+  "omitted": []
+}
