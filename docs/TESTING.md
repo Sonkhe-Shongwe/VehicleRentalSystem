@@ -2,7 +2,7 @@
 
 ## CI results
 
-Source [`d2d65730eab6`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/d2d65730eab60c7cf1b4c751efade934002eda3c) passed [GitHub Actions run 43411770135](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43411770135).
+Source [`536aede8e976`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/536aede8e9767ecb8679079d333beaf776b7c8d7) passed [GitHub Actions run 43415843061](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43415843061).
 
 | Environment | CTests | Additional checks |
 | --- | --- | --- |
@@ -35,6 +35,6 @@ Use a Windows display area large enough for the wide capture. CI checks the PNG 
 
 ## Walkthrough
 
-The [walkthrough](media/rental-walkthrough.mp4?raw=true) uses frames captured on Windows from [`1f1e626bd92d`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/1f1e626bd92d09845370473109fbf04c222185d2) in [run 43408623067](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43408623067). The 67-second edit adds captions and pauses.
+The [walkthrough](media/rental-walkthrough.mp4?raw=true) uses frames captured on Windows from [`536aede8e976`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/536aede8e9767ecb8679079d333beaf776b7c8d7) in [run 43415843061](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43415843061). The 67-second edit adds captions and pauses.
 
 In a fresh working directory, run the built Qt Quick app with `--portfolio-demo-capture` as its sole argument. It uses a temporary session and writes 54 frames to `portfolio-demo-frames`. The Windows job checks the booking and return and uploads the frames.

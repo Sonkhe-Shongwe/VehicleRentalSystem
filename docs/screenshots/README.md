@@ -1,6 +1,6 @@
 # Rental Studio on Windows
 
-Rental Studio running on Windows with sample data. Captured with Qt 6.8.3 and MSVC from commit `1f1e626bd92d09845370473109fbf04c222185d2`. [CI run](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43408623067) · [Asset credits](../ASSET_CREDITS.md)
+Rental Studio running on Windows with sample data. Overview, Vehicles and Rentals were captured with Qt 6.8.3 and MSVC from commit `1f1e626bd92d09845370473109fbf04c222185d2`. [CI run](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43408623067) · [Asset credits](../ASSET_CREDITS.md)
 
 | Screen | 1500 × 860 | 1280 × 720 |
 | --- | --- | --- |
@@ -23,6 +23,6 @@ The register and selected contract stay side by side. Select an active contract 
 
 ## SQLite Lab
 
-The completed run shows zero active contracts and one contract in History.
+The completed run shows zero active contracts and one contract in History. Captured from commit [`536aede8e976`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/536aede8e9767ecb8679079d333beaf776b7c8d7) in [CI run 43415843061](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43415843061).
 
 ![SQLite Lab after completing a booking, return, archive and vehicle retirement](sqlite-lab-1500x860.png)

@@ -436,7 +436,7 @@ static bool capturePortfolioDemo(QQuickWindow *window, FleetController &fleet,
     if (!press("bookingPreviewButton") || !frames("04-quote") ||
         !booking.canConfirm() || !booking.quoteSummary().contains("Total R 1350.00"))
         return false;
-    name->setProperty("text", "Fictional Demo Customer");
+    name->setProperty("text", "Demo Customer");
     phone->setProperty("text", "0000000000");
     if (!press("bookingConfirmButton"))
         return false;

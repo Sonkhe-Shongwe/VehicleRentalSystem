@@ -36,7 +36,7 @@ Flickable {
             }
             Label {
                 Layout.fillWidth: true
-                text: "Isolated test database. Primary workspaces use separate local records. No customer data, import, payment or commercial storage."
+                text: "The lab uses a separate sample database that resets when you close the app."
                 wrapMode: Text.WordWrap
                 color: "#17324D"
                 font.pixelSize: 12
@@ -48,13 +48,13 @@ Flickable {
                 objectName: "p7AppNextStep"
                 Layout.fillWidth: true
                 text: !p7SqlController.ready ?
-                      "LAB UNAVAILABLE · Temporary fictional SQLite data cannot be opened" :
+                      "LAB UNAVAILABLE · Could not open the sample database" :
                       p7SqlController.stage === "READY" ?
-                      "STEP 1/5 · Preview a fictional 3-day quote" :
+                      "STEP 1/5 · Preview a 3-day quote" :
                       p7SqlController.stage === "QUOTED" ?
                       "STEP 2/5 · Confirm booking (no payment collected)" :
                       p7SqlController.stage === "ACTIVE" ?
-                      "STEP 3/5 · Return fictional contract R001" :
+                      "STEP 3/5 · Return contract R001" :
                       p7SqlController.stage === "RETURNED" ?
                       "STEP 4/5 · Archive the returned contract" :
                       p7SqlController.stage === "ARCHIVED" ?
