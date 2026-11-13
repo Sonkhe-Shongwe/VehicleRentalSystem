@@ -25,4 +25,4 @@ The register and selected contract stay side by side. Select an active contract 
 
 The completed run shows zero active contracts and one contract in History.
 
-![SQLite Lab after the fictional booking, return, archive and retirement](sqlite-lab-1500x860.png)
+![SQLite Lab after completing a booking, return, archive and vehicle retirement](sqlite-lab-1500x860.png)
