@@ -4,7 +4,13 @@ An offline Windows desktop app for running a fictional vehicle rental operation.
 
 ![Rental Studio Overview showing availability, booked contract value and the overdue rental that needs attention](docs/screenshots/overview-1500x860.png)
 
-[Watch the 67-second rental walkthrough](docs/media/rental-walkthrough.mp4) · [Browse the Windows screenshots](docs/screenshots/README.md)
+## Watch the rental walkthrough
+
+The 67-second demo plays automatically. Follow the Corolla from quote and booking through return, contract history and restored availability.
+
+![Captioned rental walkthrough from the compiled Windows app](docs/media/rental-walkthrough.webp)
+
+[Download the MP4](https://raw.githubusercontent.com/Sonkhe-Shongwe/VehicleRentalSystem/d859b4d0945db0c7114cd1864b489016785265f5/docs/media/rental-walkthrough.mp4) · [Browse the Windows screenshots](docs/screenshots/README.md)
 
 ## What I built
 
