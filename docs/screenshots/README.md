@@ -1,6 +1,6 @@
 # Rental Studio on Windows
 
-These are unedited captures of the compiled Qt application running with fictional records. The [native CI run](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43401498487) generated them from portfolio commit `0438d89bbc7cd266752606feed251114e8c1e51f` using Qt 6.8.3 and MSVC. The PNGs are stored in this repository. See [asset credits](../ASSET_CREDITS.md) for the model-reference photos.
+Rental Studio running on Windows with sample data. Captured with Qt 6.8.3 and MSVC from commit `1f1e626bd92d09845370473109fbf04c222185d2`. [CI run](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43408623067) · [Asset credits](../ASSET_CREDITS.md)
 
 | Screen | 1500 × 860 | 1280 × 720 |
 | --- | --- | --- |
@@ -17,12 +17,12 @@ The gallery keeps the search, view switch and inspector visible at both sizes. I
 
 ## Rentals
 
-The register and selected contract stay side by side. The return action is visible, and Archive and Delete are disabled for the selected active contract. Booked value is described as contract value on screen.
+The register and selected contract stay side by side. Select an active contract to review its details and process a return.
 
 ![Rentals workspace with the contract register and selected rental actions](rentals-1500x860.png)
 
 ## SQLite Lab
 
-The completed demonstration shows zero active contracts and one historical contract. The lower record explorers are below the initial viewport.
+The completed run shows zero active contracts and one contract in History.
 
 ![SQLite Lab after the fictional booking, return, archive and retirement](sqlite-lab-1500x860.png)

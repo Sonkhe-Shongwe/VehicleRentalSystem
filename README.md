@@ -8,7 +8,7 @@ Rental Studio is a personal Windows desktop application for managing vehicles, b
 
 ![Rental Studio walkthrough showing a quote, booking, return and restored vehicle availability](docs/media/rental-walkthrough.webp)
 
-[Download the 67-second MP4](https://raw.githubusercontent.com/Sonkhe-Shongwe/VehicleRentalSystem/docs/portfolio-source-handoff/docs/media/rental-walkthrough.mp4)
+[Download the 67-second MP4](docs/media/rental-walkthrough.mp4?raw=true)
 
 ## Build from source
 

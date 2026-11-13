@@ -2,7 +2,7 @@
 
 ## CI results
 
-Source [`d859b4d0945d`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/d859b4d0945db0c7114cd1864b489016785265f5) passed [GitHub Actions run 43406064178](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43406064178).
+Source [`1f1e626bd92d`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/1f1e626bd92d09845370473109fbf04c222185d2) passed [GitHub Actions run 43408623067](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43408623067).
 
 | Environment | CTests | Additional checks |
 | --- | --- | --- |
@@ -33,9 +33,8 @@ ctest --preset rental-studio-local-all -C Debug -R "portfolio_catalog|p7_actual_
 
 Use a Windows display area large enough for the wide capture. CI checks the PNG dimensions, integrity and basic pixel variation before uploading screenshots for visual review.
 
-
 ## Walkthrough
 
-The [walkthrough](media/rental-walkthrough.mp4) uses frames from one run of the Windows application. Captions and pauses were added for readability.
+The [walkthrough](media/rental-walkthrough.mp4?raw=true) uses frames from the Windows job linked above. The 67-second edit adds captions and pauses.
 
 In a fresh working directory, run the built Qt Quick app with `--portfolio-demo-capture` as its sole argument. It uses a temporary session and writes 54 frames to `portfolio-demo-frames`. The Windows job checks the booking and return and uploads the frames.
