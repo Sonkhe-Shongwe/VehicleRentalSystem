@@ -10,6 +10,10 @@ Rental Studio is an offline Windows desktop app for running a fictional vehicle 
 
 The default demo resets when you close the app. Use fictional details throughout. The optional SQLite Lab shows the rental lifecycle using a separate temporary database.
 
+![Rental Studio Overview showing fictional fleet availability, recent contracts and an overdue rental](docs/screenshots/overview-1500x860.png)
+
+[See all four screens at both window sizes](docs/screenshots/README.md).
+
 ## Run on Windows
 
 1. Clone this repository and open the root `CMakeLists.txt` in **Qt Creator**.
@@ -28,5 +32,5 @@ To try the **SQLite Lab**, add `--p7-fictional-sql-lab` to the run arguments in 
 ## Explore the engineering
 
 - [Architecture](docs/ARCHITECTURE.md) explains the C++ and QML boundary, pricing, transaction safeguards and the SQLite Lab.
-- [Testing](docs/TESTING.md) shows how to run CTest and reproduce the native screenshot captures.
+- [Testing](docs/TESTING.md) records 150 passing native tests on each of Windows and Linux, eight Windows packaged checks, and how to reproduce the screenshots.
 - [Image and icon credits](docs/ASSET_CREDITS.md) record the reference media used in this edition.

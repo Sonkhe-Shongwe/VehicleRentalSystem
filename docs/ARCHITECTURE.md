@@ -15,7 +15,7 @@ A quote previews the proposed vehicle, dates, duration and amount. Confirmation 
 
 ## Data and money
 
-The standard demo writes its fictional records through the local `QSaveFile` path. The application services use integer cents for quote calculations and verify the amount at confirmation. Booked contract values represent obligations recorded on the contracts. The demo has no payment collection.
+The standard demo writes its fictional records through the local `QSaveFile` path. The standard quote service calculates with the domain’s existing decimal rates and rechecks the amount at confirmation. The SQLite Lab stores and calculates monetary values in integer cents. Booked contract values represent obligations recorded on the contracts. The demo has no payment collection.
 
 The SQLite Lab uses its own generated fixtures and temporary database. Its schema enforces foreign keys and one active contract per occupied vehicle. Its lifecycle and rollback tests exercise this database independently of the normal workspaces.
 

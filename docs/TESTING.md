@@ -2,6 +2,17 @@
 
 The source in this repository was imported from development commit `87e001e880dae32770492e03556af346757d6517`. The portfolio edition retains the application and native tests. Its asset selection uses 29 reference photos with recorded CC0 declarations, and its catalogue tests assert both retained photos and labelled fallback illustrations.
 
+## Verified portfolio build
+
+The portfolio source commit [`0438d89bbc7c`](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/commit/0438d89bbc7cd266752606feed251114e8c1e51f) passed both jobs in [GitHub Actions run 43401498487](https://github.com/Sonkhe-Shongwe/VehicleRentalSystem/actions/runs/43401498487). Both jobs checked out that exact source commit.
+
+| Hosted environment | Native CTests | Additional checks |
+| --- | --- | --- |
+| Ubuntu 24.04, GCC 13.3.0, Qt 6.8.3 | 150 passed, 0 failed | 8 PNGs validated |
+| Windows Server 2022, MSVC 19.44.35229.0, Qt 6.8.3 | 150 passed, 0 failed | 8 PNGs validated and 8/8 fictional checks on the relocated Windows app |
+
+The [screenshot gallery](screenshots/README.md) contains the selected Windows captures from this run. The documentation and screenshot commit does not change the compiled inputs. A clean offline consumer Windows check is deferred.
+
 ## Run locally
 
 Configure the `rental-studio-local` preset with a Qt 6 desktop kit. From a terminal configured for that kit:
