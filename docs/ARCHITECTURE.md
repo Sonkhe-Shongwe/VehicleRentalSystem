@@ -17,9 +17,9 @@ The app shows a booking confirmation after the save succeeds. A return releases 
 
 ## Local data
 
-The standard demo uses `QSaveFile` to write local records in a temporary session. An optional persistent fictional mode keeps sample records between launches. The standard quote uses the existing decimal rates. Booked value is the amount on a contract. The app has no payment collection.
+The standard demo writes records to a temporary local folder using `QSaveFile`. Launch with `--persistent-fictional-demo` to keep a separate set of sample records between sessions. The standard quote uses decimal rates. Booked value is the contract amount. Rental Studio does not collect payments.
 
-The SQLite Lab uses its own temporary database. It stores amounts in integer cents and enforces foreign keys and one active contract per vehicle.
+Launch with `--p7-fictional-sql-lab` and select **SQLite Lab** in the sidebar to try the separate test workflow. The lab starts with sample records in its own temporary database. It stores amounts in integer cents and enforces foreign keys and one active contract per vehicle.
 
 ## Interface
 
