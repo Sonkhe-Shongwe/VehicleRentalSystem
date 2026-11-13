@@ -1,15 +1,13 @@
 import QtQuick
 import QtQuick.Controls
 
-// Owner-approved UX-CTRL-002 permanently destructive visual language.
-// Does not change a command or its C++ guard, confirmation or storage scope.
+// Shared styling for permanent deletion actions.
 Button {
     id: control
     hoverEnabled: true
     activeFocusOnTab: true
     implicitHeight: 44
-    // Presentation-only M2 refinement: a press must be distinguishable
-    // from hover. Safety state, C++ eligibility, and focus update instantly.
+    // Keep the press state distinct from hover, including with reduced motion.
     readonly property int hoverFeedbackMs: motionPolicy.reducedMotion ? 0 : colors.hoverFeedbackMs
     readonly property int pressFeedbackMs: motionPolicy.reducedMotion ? 0 : colors.pressFeedbackMs
     readonly property color feedbackSurface: !control.enabled ? colors.disabledSurface :

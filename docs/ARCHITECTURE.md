@@ -1,24 +1,26 @@
 # Architecture
 
-Rental Studio has three operational workspaces and an explicitly enabled SQLite Lab. The normal launch builds a disposable session from fictional fixtures. A separate opt-in persistent fictional mode is available for repeatable local testing.
+Rental Studio began as a university project using Qt Widgets. The current desktop app uses Qt Quick for Overview, Vehicles and Rentals, with C++ handling pricing, availability and changes to rental records.
 
-| Layer | Responsibility |
+| Area | Entry point |
 | --- | --- |
-| [Qt Quick interface](../spikes/qtquick_p2/Main.qml) | Renders the workspaces, navigation, filters, forms and confirmations. |
-| [Application services](../src/application) | Expose typed fleet and rental data and coordinate quotes, booking, return and archive. |
-| [Rental domain](../rentalsystem.cpp) | Enforces availability and lifecycle rules, commits local changes and rolls back failed writes. |
-| [SQLite Lab](../src/application/p7_sandbox) | Runs an isolated fictional lifecycle with normalized tables, transactions, constraints and integer-cent amounts. |
+| Navigation, workspaces and dialogs | [Main.qml](../spikes/qtquick_p2/Main.qml) |
+| Fleet and rental services | [Application layer](../src/application) |
+| Rental rules and local storage | [rentalsystem.cpp](../rentalsystem.cpp) |
+| SQLite transactions and constraints | [sqlite_repository.h](../src/application/p7_sandbox/sqlite_repository.h) |
 
 ## Booking and return
 
-A quote previews the proposed vehicle, dates, duration and amount. Confirmation recomputes the quote against current availability and rejects stale or invalid requests. The booking service publishes its receipt after the protected write succeeds. For a return, the domain validates the contract state and date, writes the update and releases the vehicle. Returned contracts stay in history and can be archived by a separate action.
+The booking service recalculates the quote when the user confirms it. For example, a three-day quote at R 450 per day totals R 1,350. If the rate changes to R 500 before confirmation, the old quote is rejected. A fresh preview shows R 1,500. The regression test checks that the rejected quote leaves the vehicle available and creates no rental record. [Confirmation service](../src/application/rental_confirm_service.cpp) · [Regression test](../tests/p3_rental_confirm_tests.cpp)
 
-## Data and money
+The app shows a booking confirmation after the save succeeds. A return releases the vehicle and keeps the contract in History. Archiving is a separate action.
 
-The standard demo writes its fictional records through the local `QSaveFile` path. The standard quote service calculates with the domain’s existing decimal rates and rechecks the amount at confirmation. The SQLite Lab stores and calculates monetary values in integer cents. Booked contract values represent obligations recorded on the contracts. The demo has no payment collection.
+## Local data
 
-The SQLite Lab uses its own generated fixtures and temporary database. Its schema enforces foreign keys and one active contract per occupied vehicle. Its lifecycle and rollback tests exercise this database independently of the normal workspaces.
+The standard demo uses `QSaveFile` to write local records in a temporary session. An optional persistent fictional mode keeps sample records between launches. The standard quote uses the existing decimal rates. Booked value is the amount on a contract. The app has no payment collection.
 
-## UI and media
+The SQLite Lab uses its own temporary database. It stores amounts in integer cents and enforces foreign keys and one active contract per vehicle.
 
-Gallery and Table share vehicle identities and C++ model state. Rentals uses stable contract IDs across filters. The application provides accessible labels, keyboard focus states and reduced-motion handling. Vehicle photos illustrate make and model families. The app displays a labelled silhouette for families without a reference photo. See the [asset credits](ASSET_CREDITS.md).
+## Interface
+
+Gallery and Table share the same vehicle selection. Rentals tracks the selected contract by ID across filters. The interface provides keyboard navigation, accessible labels and reduced-motion handling. See [asset credits](ASSET_CREDITS.md) for the vehicle reference photos.

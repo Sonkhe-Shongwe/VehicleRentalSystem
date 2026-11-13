@@ -10,7 +10,6 @@ ApplicationWindow {
     visible: true
     title: p7SqlLabEnabled ? "Rental Studio 2.0 · SQLite Lab" : "Rental Studio 2.0"
 
-    // Shared owner-selected tokens; preserve the existing local bindings.
     DesignTokens { id: designTokens }
     // Keep the native Windows titlebar to preserve window accessibility.
     // MotionPolicy is C++-owned; no OS rules or filesystem access in QML.
@@ -22,7 +21,6 @@ ApplicationWindow {
     readonly property color ice: designTokens.ice
     readonly property color mint: designTokens.mint
     readonly property color ink: designTokens.ink
-    // Direction A: lead with the operational Overview on normal launch.
     property int workspace: 0
     property bool gallery: true
     // Shell presentation only: never changes workspace, selection or C++ records.
@@ -121,8 +119,7 @@ ApplicationWindow {
         return true
     }
 
-    // Precision Automotive shell shortcut. This reuses the existing native
-    // booking dialogue and C++ preview/confirm path; no new booking logic.
+    // Open the booking dialog after the Rentals workspace has loaded.
     function beginNewRental(fromSidebar) {
         if (bookingDialog.visible) return false
         window.bookingReceiptNotice = ""
@@ -1720,7 +1717,7 @@ ApplicationWindow {
                                 border.color: overviewActiveButton.activeFocus ? navy : "transparent"
                                 border.width: overviewActiveButton.activeFocus ? 3 : 0
                             }
-                            // Reuse the genuine licensed R2 vector, not a glyph.
+                            // Use the bundled vector icon.
                             contentItem: RowLayout {
                                 spacing: 3
                                 Item { Layout.fillWidth: true }
@@ -3227,7 +3224,7 @@ ApplicationWindow {
                                 text: fleet.selectedId === ""
                                       ? "Select a vehicle to inspect its details and availability."
                                       : fleet.selectedAvailable
-                                        ? "Available for a new rental. Review the authoritative C++ quote before confirming."
+                                        ? "Available to book."
                                         : "Already rented. Return the active rental before booking this vehicle again."
                                 color: ink; Layout.fillWidth: true; wrapMode: Text.WordWrap
                                 font.pixelSize: window.height < 800 ? 12 : 13
@@ -3380,7 +3377,7 @@ ApplicationWindow {
                     Dialog {
                         id: bookingDialog
                         objectName: "rentalBookingDialog"
-                        title: "New rental: review authoritative quote"
+                        title: "New rental"
                         modal: true
                         focus: true
                         parent: Overlay.overlay
@@ -3443,7 +3440,7 @@ ApplicationWindow {
                             Button {
                                 id: bookingPreviewButton
                                 objectName: "bookingPreviewButton"
-                                text: bookingActions.needsFreshQuote ? "Refresh quote" : "Preview C++ quote"
+                                text: bookingActions.needsFreshQuote ? "Refresh quote" : "Preview quote"
                                 Layout.minimumHeight: 44
                                 hoverEnabled: true
                                 background: Rectangle {
@@ -3461,10 +3458,10 @@ ApplicationWindow {
                                 }
                                 activeFocusOnTab: true
                                 Accessible.name: bookingActions.needsFreshQuote
-                                    ? "Refresh outdated rental quote" : "Preview current C++ rental quote"
+                                    ? "Refresh outdated rental quote" : "Preview quote"
                                 Accessible.description: bookingActions.needsFreshQuote
                                     ? "The previous quote cannot be confirmed. Review current availability and price."
-                                    : "Review a current domain quote before enabling Confirm booking"
+                                    : "Review the quote before confirming the booking."
                                 onClicked: bookingActions.preview(bookingVehicleId.text, bookingDays.value)
                             }
                             Rectangle {

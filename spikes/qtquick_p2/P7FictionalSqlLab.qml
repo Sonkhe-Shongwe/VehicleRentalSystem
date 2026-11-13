@@ -2,9 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-// P7 owner-approved D1 *fictional-only* integration into the actual Qt Quick
-// executable. This workspace has its own generated QTemporaryDir SQLite DB.
-// There is no production path, customer/contact input, or legacy migration.
+// The lab uses its own temporary SQLite database with generated data.
 Flickable {
     id: lab
     objectName: "p7AppSqlLab"
@@ -78,7 +76,7 @@ Flickable {
         spacing: 14
         P7LabSnapshotCard {
             objectName: "p7AppFleetSnapshotCard"
-            heading: "SQLITE FLEET · VERIFIED C++ SNAPSHOT"
+            heading: "FLEET"
             snapshotAvailable: p7SqlFleet.snapshotAvailable
             summary: p7SqlFleet.snapshotAvailable ?
                      p7SqlFleet.totalCount + " vehicle  |  " +
@@ -91,7 +89,7 @@ Flickable {
         }
         P7LabSnapshotCard {
             objectName: "p7AppRentalsSnapshotCard"
-            heading: "SQLITE RENTALS · VERIFIED C++ SNAPSHOT"
+            heading: "RENTALS"
             snapshotAvailable: p7SqlRentals.snapshotAvailable
             summary: p7SqlRentals.snapshotAvailable ?
                      "Active: " + p7SqlRentals.activeCount +
@@ -198,7 +196,7 @@ Flickable {
             anchors.margins: 15
             spacing: 5
             Label {
-                text: "SQLITE OPERATIONAL OVERVIEW · ONE CONSISTENT C++ SNAPSHOT"
+                text: "SUMMARY"
                 color: "#0F766E"
                 font.bold: true
                 Accessible.name: text

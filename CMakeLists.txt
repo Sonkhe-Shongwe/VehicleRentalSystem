@@ -285,23 +285,17 @@ if(BUILD_TESTING)
         COMMAND vehicle_rental_p3_admin_command_tests)
 endif()
 
-# The owner authorized a fictional-only Qt Quick SQLite integration, NOT real
-# business data. Declare before the Qt Quick subdir so its optional target can
-# check the same OFF-by-default flag at configure time.
-option(BUILD_P7_SQLITE_SANDBOX "Build opt-in generated-fictional P7 SQLite CTests and Qt Quick lab" OFF)
+option(BUILD_P7_SQLITE_SANDBOX "Build the optional SQLite Lab and its tests" OFF)
 
-# Isolated P2 technical spike. OFF by default: legacy Qt Widgets builds,
-# CTest, and CI remain unchanged until the native Qt Quick kit is validated.
-option(BUILD_QTQUICK_P2_SPIKE "Build non-mutating Qt Quick Fleet proof" OFF)
+option(BUILD_QTQUICK_P2_SPIKE "Build the Rental Studio Qt Quick application" OFF)
 if(BUILD_QTQUICK_P2_SPIKE)
     if(NOT QT_VERSION_MAJOR EQUAL 6)
-        message(FATAL_ERROR "P2 Qt Quick spike requires Qt 6.5 or later.")
+        message(FATAL_ERROR "Rental Studio Qt Quick requires Qt 6.5 or later.")
     endif()
     add_subdirectory(spikes/qtquick_p2)
 endif()
 
-# P7-B: separate opt-in SQLite/QtSql proof using exclusively generated
-# synthetic records. Not linked to the Widget app or Qt Quick executable.
+# Build the standalone tests for the SQLite Lab.
 if(BUILD_P7_SQLITE_SANDBOX)
     if(NOT QT_VERSION_MAJOR EQUAL 6 OR NOT BUILD_TESTING)
         message(FATAL_ERROR "P7 sandbox requires Qt6 and BUILD_TESTING=ON")

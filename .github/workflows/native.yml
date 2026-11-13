@@ -99,7 +99,7 @@ jobs:
             build/ci/spikes/qtquick_p2/catalogue-qt-rentals-*.png
             build/ci/spikes/qtquick_p2/p7-real-app-fictional-sql-lab-*.png
           if-no-files-found: error
-      - name: Capture the fictional portfolio journey
+      - name: Capture the rental walkthrough
         if: runner.os == 'Windows'
         shell: pwsh
         working-directory: build/ci
@@ -107,9 +107,9 @@ jobs:
           & "./spikes/qtquick_p2/Release/rental_studio_qtquick_spike.exe" --portfolio-demo-capture
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           if (@(Get-ChildItem -LiteralPath portfolio-demo-frames -Filter '*.jpg').Count -ne 54) {
-            throw "The portfolio journey did not produce all 54 frames"
+            throw "The walkthrough did not produce all 54 frames"
           }
-      - name: Upload native portfolio journey frames
+      - name: Upload walkthrough frames
         if: runner.os == 'Windows'
         uses: actions/upload-artifact@v4
         with:

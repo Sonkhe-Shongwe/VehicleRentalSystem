@@ -1,6 +1,6 @@
 # Asset credits
 
-The portfolio bundles 29 reference JPEGs with recorded Wikimedia Commons CC0 declarations. The photos depict representative make and model families. They have been resized and re-encoded for the app, with letterboxing where applicable. The fleet uses labelled silhouettes for the remaining families.
+Rental Studio includes 29 vehicle reference photos listed as CC0 on Wikimedia Commons. They illustrate model families in the fictional fleet. The images were resized and re-encoded, with letterboxing where needed. Other model families use labelled silhouettes.
 
 | Local file | Creator | Original source | Declared terms |
 | --- | --- | --- | --- |

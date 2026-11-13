@@ -1,7 +1,5 @@
 import QtQuick
 
-// Owner-approved Navy/Emerald/Cloud palette. Source: design/r1/OWNER_THEME_DIRECTION.
-// No guessed typography licensing, motion preference or WCAG signoff.
 QtObject {
     readonly property color navy: "#17324D"
     readonly property color teal: "#0F766E"
@@ -12,13 +10,11 @@ QtObject {
     readonly property color ink: "#5F6F82"
     readonly property color border: "#D8E2E8"
     readonly property color rented: "#1D4ED8"
-    // Precision Automotive Light: semantic shell roles derived from the
-    // selected Navy/Emerald tokens. Keep these consistent across workspaces.
     readonly property color sidebarSelected: "#D7F0E5"
     readonly property color quietSurface: "#F1F5F8"
     readonly property color pageHeading: "#14202A"
     readonly property color secondaryText: "#5F6F78"
-    // Editorial Contrast R2: dark shell around a LIGHT desktop workspace.
+    // Sidebar colours.
     readonly property color shell: "#151B1B"
     readonly property color shellText: "#F7FAF9"
     readonly property color shellMuted: "#B9C9C5"
@@ -50,7 +46,6 @@ QtObject {
     readonly property int pageSubtitleSize: 15
     readonly property int sidebarActionHeight: 48
     readonly property int componentRadius: 10
-    // Owner-approved UX-CTRL-002 semantic states, not a new competing theme.
     readonly property color primaryHover: "#0C625C"
     readonly property color warningSurface: "#FFF2D5"
     readonly property color warningInk: "#965A0A"
